@@ -1,0 +1,11 @@
+{
+  "name": "AzureKeyVaultExporer",
+  "version": "1.0.0",
+  "main": "./app/app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.5"
+  }
+}

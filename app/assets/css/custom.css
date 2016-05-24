@@ -1,0 +1,4 @@
+ div#sidebar {
+          resize: both;
+          overflow: auto;
+         }
