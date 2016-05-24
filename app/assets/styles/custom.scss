@@ -1,8 +1,55 @@
-$padding: 6px;
+body {
+    overflow: hidden;
+    margin: 0;
+}
 
-nav {
-    ul{
-        padding: $padding;
-        color: white;  
-    }
+// Splitter
+#MySplitter {
+	border: 3px solid #669;
+	min-width: 500px;	/* Splitter can't be too thin ... */
+	min-height: 300px;	/* ... or too flat */
+	height: 100%;
+}
+#LeftPane {
+	width: 150px;
+	min-width: 100px;
+	max-width: 300px;
+}
+#TopPane {				/* Top nested in right pane */
+	height: 150px;		/* Initial height */
+	min-height: 75px;	/* Minimum height */
+}
+#BottomPane {
+	background: #eef;
+	min-height: 100px;
+}
+
+/* Splitbar styles; these are the default class names */
+
+.ui-state-default { background-color: #88c }
+.ui-state-hover { background-color: #bbf }
+.ui-state-highlight { background-color: #68f }
+.ui-state-error { background-color: #eaa }
+
+.splitter-pane {
+	overflow: auto;
+}
+.splitter-bar-vertical {
+	width: 6px;
+	background-color: #669;
+}
+.splitter-bar-horizontal {
+	height: 6px;
+	background-color: #669;
+}
+.splitter-bar.ui-state-highlight {
+	opacity: 0.7;
+}
+.splitter-iframe-hide {
+	visibility: hidden;
+}
+
+// Bootstrap overrides
+.navbar {
+    margin-bottom: 0;
 }
