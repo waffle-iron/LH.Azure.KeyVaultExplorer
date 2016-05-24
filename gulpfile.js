@@ -6,12 +6,11 @@ var sass = require('gulp-sass');
 var paths = {
     "scripts": [ 'app/**/*.ts' ],
     "scriptsDest": "out/scripts/",
-    "scriptsFileName": "super_dummy.js",
-    "styles": [ "app/assets/**/*.scss" ],
-    "stylesDest": "out/assets/styles/"
+    "styles": [ "app/assets/styles/*.scss" ],
+    "stylesDest": "app/assets/styles"
 }
 
-var tsProject = ts.createProject('tsconfig.json', { sortOutput: true });
+var tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('scripts', function() {
   var tsResult = tsProject
@@ -35,4 +34,4 @@ gulp.task('watch', function () {
   gulp.watch(path.scripts, ['scripts']);
 });
 
-gulp.task('default', ['watch'], function () {});
+gulp.task('default', ['scripts', 'sass'], function () {});

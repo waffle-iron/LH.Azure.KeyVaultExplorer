@@ -7,17 +7,7 @@
     ],
     "tasks": [
 		{
-			"taskName": "scripts",
-			"isBuildCommand": true,
-			"showOutput": "always"
-		},
-		{
-			"taskName": "sass",
-			"isBuildCommand": true,
-			"showOutput": "always"
-		},
-		{
-			"taskName": "watch",
+			"taskName": "default",
 			"isBuildCommand": true,
 			"showOutput": "always"
 		}
