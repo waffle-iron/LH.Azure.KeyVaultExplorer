@@ -1,11 +1,34 @@
 {
-  "name": "AzureKeyVaultExporer",
+  "name": "azure-key-vault-explorer",
   "version": "1.0.0",
-  "main": "./app/app.js",
+  "author": "Lukas Holota",
+  "main": "./app/electron.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lholota/LH.Azure.KeyVaultExplorer.git"
+  },
   "scripts": {
     "start": "electron ."
   },
   "devDependencies": {
     "electron-prebuilt": "^0.37.5"
-  }
+  },
+  "description": "KeyVault GUI Client",
+  "bugs": {
+    "url": "https://github.com/lholota/LH.Azure.KeyVaultExplorer/issues"
+  },
+  "homepage": "https://github.com/lholota/LH.Azure.KeyVaultExplorer#readme",
+  "dependencies": {
+    "electron": "^0.4.1",
+    "electron-prebuilt": "^0.37.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-typescript": "^2.13.4",
+    "merge2": "^1.0.2"
+  },
+  "keywords": [
+    "azure",
+    "key-vault"
+  ]
 }
