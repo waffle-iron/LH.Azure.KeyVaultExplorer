@@ -3,25 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>Azure KeyVault Explorer - Lukas Holota</title>
-  <link rel="stylesheet" type="text/css" href="../../libs/photon/dist/css/photon.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/styles/theme.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/styles/custom.css">
+  
+  <script>
+    document.addEventListener("keydown", function (e) {
+      if (e.which === 123) {
+        require('remote').getCurrentWindow().toggleDevTools();
+      } else if (e.which === 116) {
+        location.reload();
+      }
+    });
+  </script>
 </head>
 <body>
+   <nav class="navbar navbar-default class navbar-fixed">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
 
- <div class="window">
-  <header class="toolbar toolbar-header">
-    <h1 class="title">Header</h1>
-  </header>
-  <div class="window-content">
-    <div class="pane-group">
-      <div class="pane-sm sidebar">...</div>
-      <div class="pane">...</div>
-    </div>
-  </div>
-  <footer class="toolbar toolbar-footer">
-    <h1 class="title">Footer</h1>
-  </footer>
-</div>
-
-  <script>require('../controllers/index.js')</script>
+  <script>window.$ = window.jQuery = require('../libs/jquery/dist/jquery.min.js');</script>
+  <script>require('../libs/jquery-splitter/splitter.js')</script>
+  <!--<script>require('../controllers/index.js')</script>-->
 </body>
 </html>
