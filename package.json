@@ -2,7 +2,7 @@
   "name": "azure-key-vault-explorer",
   "version": "1.0.0",
   "author": "Lukas Holota",
-  "main": "./app/electron.js",
+  "main": "./electron.js",
   "license": "MIT",
   "repository": {
     "type": "git",

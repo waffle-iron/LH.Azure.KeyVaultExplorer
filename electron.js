@@ -14,5 +14,5 @@ app.on('ready', function() {
     });
 
     mainWindow.setMenu(null);
-    mainWindow.loadUrl('file://' + __dirname + '/views/index.html');
+    mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
 });

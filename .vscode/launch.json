@@ -4,7 +4,7 @@
         { 
             "name": "Launch Electron App",
             "type": "node",
-            "program": "${workspaceRoot}/app/app.js", // important
+            "program": "${workspaceRoot}/electron.js", // important
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
