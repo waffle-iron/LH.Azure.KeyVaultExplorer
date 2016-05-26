@@ -1,4 +1,4 @@
 "use strict";
 var browser_1 = require('angular2/platform/browser');
-var KeyVaultTreeComponent_1 = require('./sidebar/KeyVaultTreeComponent');
-browser_1.bootstrap(KeyVaultTreeComponent_1.KeyVaultTreeComponent);
+var KeyVaultTree_Component_1 = require('./sidebar/KeyVaultTree.Component');
+browser_1.bootstrap(KeyVaultTree_Component_1.KeyVaultTreeComponent);
