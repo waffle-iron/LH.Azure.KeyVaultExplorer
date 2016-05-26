@@ -1,5 +1,6 @@
- html, body {
+html, body {
 	height: 100%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
 }
 
 body {
@@ -8,7 +9,13 @@ body {
 	overflow: hidden;  
 }
 
-// Splitter
+// Splitter layout
+$navColor: #202428;
+$chromeColor: #282D32;
+$activeChromeColor: #33383C;
+$accentColor: #00BCF2;
+$tableBorderColor: #C0C0C0;
+
 #wrapper {
 	width: 100%;
 	height: 100%;
@@ -23,18 +30,33 @@ body {
 
 #nav {
 	height: 50px;
-	background-color: #ccc;
+	background-color: $navColor;
 }
 
 #sidebar {
-	background-color: #E92727;
+	background-color: $chromeColor;
+	color: #fff;
+}
+
+#sidebar ul {
+	list-style-type: none;
 }
 
 #content-pane {
-	background-color: #BEE927;
+	background-color: #fff;
 }
 
 // Bootstrap overrides
 .navbar {
     margin-bottom: 0;
+	height: 40px;
+}
+
+.navbar-inverse {
+	background-color: $navColor;
+}
+
+.navbar-inverse span.navbar-brand, 
+.navbar-inverse span.navbar-brand:hover {
+	color: $accentColor;
 }

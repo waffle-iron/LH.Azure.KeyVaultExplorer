@@ -1,5 +1,6 @@
 html, body {
-  height: 100%; }
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana; }
 
 body {
   padding: 0;
@@ -18,15 +19,25 @@ body {
 
 #nav {
   height: 50px;
-  background-color: #ccc; }
+  background-color: #202428; }
 
 #sidebar {
-  background-color: #E92727;
-  width: 25%;
-  min-width: 100px; }
+  background-color: #282D32;
+  color: #fff; }
+
+#sidebar ul {
+  list-style-type: none; }
 
 #content-pane {
-  background-color: #BEE927; }
+  background-color: #fff; }
 
 .navbar {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  height: 40px; }
+
+.navbar-inverse {
+  background-color: #202428; }
+
+.navbar-inverse span.navbar-brand,
+.navbar-inverse span.navbar-brand:hover {
+  color: #00BCF2; }
