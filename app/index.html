@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Azure KeyVault Explorer (LH)</title>
   <link rel="stylesheet" type="text/css" href="assets/styles/theme.min.css">
   <link rel="stylesheet" type="text/css" href="assets/styles/custom.css">
-  
-  <script>
-    document.addEventListener("keydown", function (e) {
-      if (e.which === 123) {
-        require('remote').getCurrentWindow().toggleDevTools();
-      } else if (e.which === 116) {
-        location.reload();
-      }
-    });
-  </script>
+  <link href="../libs/jquery-splitter/splitter.css" rel="stylesheet" />
 </head>
+
 <body>
-   <!--<nav class="navbar navbar-inverse class navbar-fixed">
+  <!--<nav class="navbar navbar-inverse class navbar-fixed">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -55,33 +48,55 @@
       </div>
     </nav>-->
 
- <div id="MySplitter">
+  <div id="wrapper">
+    <div id="nav">Navigation</div>
+    <div id="widget">
+      <div id="foo">
+        <div id="a">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed dolor nisl, in suscipit justo. Donec a enim et est porttitor
+          semper at vitae augue. Proin at nulla at dui mattis mattis. Nam a volutpat ante. Aliquam consequat dui eu sem convallis
+          ullamcorper. Nulla suscipit, massa vitae suscipit ornare, tellus est consequat nunc, quis blandit elit odio eu
+          arcu. Nam a urna nec nisl varius sodales. Mauris iaculis tincidunt orci id commodo. Aliquam non magna quis tortor
+          malesuada aliquam eget ut lacus. Nam ut vestibulum est. Praesent volutpat tellus in eros dapibus elementum. Nam
+          laoreet risus non nulla mollis ac luctus felis dapibus. Pellentesque mattis elementum augue non sollicitudin. Nullam
+          lobortis fermentum elit ac mollis. Nam ac varius risus. Cras faucibus euismod nulla, ac auctor diam rutrum sit
+          amet. Nulla vel odio erat, ac mattis enim.
+        </div>
+        <!-- #a -->
+        <div id="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed dolor nisl, in suscipit justo. Donec a enim et
+          est porttitor semper at vitae augue. Proin at nulla at dui mattis mattis. Nam a volutpat ante. Aliquam consequat
+          dui eu sem convallis ullamcorper. Nulla suscipit, massa vitae suscipit ornare, tellus est consequat nunc, quis
+          blandit elit odio eu arcu. Nam a urna nec nisl varius sodales. Mauris iaculis tincidunt orci id commodo. Aliquam
+          non magna quis tortor malesuada aliquam eget ut lacus. Nam ut vestibulum est. Praesent volutpat tellus in eros
+          dapibus elementum. Nam laoreet risus non nulla mollis ac luctus felis dapibus. Pellentesque mattis elementum augue
+          non sollicitudin. Nullam lobortis fermentum elit ac mollis. Nam ac varius risus. Cras faucibus euismod nulla, ac
+          auctor diam rutrum sit amet. Nulla vel odio erat, ac mattis enim.</div>
+      </div>
+      <!-- end of #foo -->
+      <div id="bar">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed dolor nisl, in suscipit justo. Donec a enim et est porttitor
+        semper at vitae augue. Proin at nulla at dui mattis mattis. Nam a volutpat ante. Aliquam consequat dui eu sem convallis
+        ullamcorper. Nulla suscipit, massa vitae suscipit ornare, tellus est consequat nunc, quis blandit elit odio eu arcu.
+        Nam a urna nec nisl varius sodales. Mauris iaculis tincidunt orci id commodo. Aliquam non magna quis tortor malesuada
+        aliquam eget ut lacus. Nam ut vestibulum est. Praesent volutpat tellus in eros dapibus elementum. Nam laoreet risus
+        non nulla mollis ac luctus felis dapibus. Pellentesque mattis elementum augue non sollicitudin. Nullam lobortis fermentum
+        elit ac mollis. Nam ac varius risus. Cras faucibus euismod nulla, ac auctor diam rutrum sit amet. Nulla vel odio
+        erat, ac mattis enim.
+      </div>
+    </div>
+    <!-- end of #widget -->
+  </div>
 
-  <div id="LeftPane">
-		<p>This is the left pane of the 3-pane splitter. It has been limited to a range of 100 to 300 pixels wide with the minA/maxA properties of the plugin. It starts at 150 pixels wide because of the #LeftPane's width property.</p>
-		<p>Essentially, a 3-pane splitter is just a vertical splitter with a horizontal splitter nested in the right-hand side. This same technique can be used to create multiple vertical and/or horizontal splitter layouts.</p>
-  </div> <!-- #LeftPane -->
-  
-  <div id="RightPane">
-  
-	<div id="TopPane">
-		<p>This is the top-right part of the 3-pane splitter. It starts at 150 pixels because the height of #TopPane was set in the stylesheet. The stylesheet has also set <code>min-height: 75px</code> so it can't get any smaller than that.</p>
-		<p>The splitbars are keyboard-accessible. Use <kbd>Alt-Shift-I</kbd> to select the vertical splitbar, or <kbd>Alt-Shift-H</kbd>  for the horizontal one. Then use the arrow keys to move the bar. The plugin lets you specify any key for the access key, but be sure to test on all browsers in case they reserve those keystrokes.</p>
-	</div>
-	
-	<div id="BottomPane">
-		<p>This is the bottom-right part of the 3-pane splitter. It can't get any smaller than 100 pixels tall--because the stylesheet says so, that's why.</p>
-		
-		<p>Notice that the #MySplitter element is set to <code>min-width: 400px</code>, so some of the splitter will be out of sight if you try to resize the browser window too narrowly. Similarly, it has <code>min-height: 300px</code> so the splitter won't perform an impossible act--like setting itself to a negative height if window is resized above the top of the splitter!</p>
-	</div> <!-- #BottomPane -->
-	
-  </div> <!-- #RightPane -->
-  
-</div> <!-- #MySplitter -->
-
-  <script>window.$ = window.jQuery = require('../libs/jquery/dist/jquery.min.js');</script>
-  <script>require('../libs/bootstrap/dist/js/bootstrap.min.js')</script>
-  <script>require('../libs/jquery-splitter/splitter.js')</script>
+  <script>
+    window.$ = window.jQuery = require('../libs/jquery/dist/jquery.min.js');
+  </script>
+  <script>
+    require('../libs/bootstrap/dist/js/bootstrap.min.js')
+  </script>
+  <script>
+    require('../libs/jquery-splitter/splitter.js')
+  </script>
   <script src="index.js"></script>
 </body>
+
 </html>
